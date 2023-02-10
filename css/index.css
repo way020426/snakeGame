@@ -1,0 +1,43 @@
+*{
+    /* 去除内外边距 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 游戏容器样式 */
+.container{
+    width: 600px;
+    height: 600px;
+    background: url(../imgs/background.png) center no-repeat;
+    border: 20px solid rgb(74, 71, 71);
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 为了后面控制蛇的移动 */
+    position: relative;
+}
+
+/* 按钮的统一样式 */
+.container button {
+    border: none;
+    outline: none;
+}
+
+/* 开始按钮样式 */
+.startBtn{
+    width:80px;
+    height: 80px;
+    border-radius: 50px;
+    background:url(../imgs/start.png) center/contain no-repeat;
+    display: block;
+}
+
+/* 暂停按钮样式 */
+.pauseBtn{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background: url(../imgs/pause.png) center/contain no-repeat;
+    display: none;
+}
