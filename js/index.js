@@ -225,33 +225,34 @@ function bindEvent() {
   // 键盘事件
   document.onkeydown = function (e) {
     if (
-      (e.key.toLocaleLowerCase === "w" || e.key === "ArrowUp") &&
+      (e.key === "ArrowUp" || e.key.toLocaleLowerCase() === "w") &&
       snake.direction.flag !== "bottom"
     ) {
       // 上
       snake.direction = directionNum.top;
     }
     if (
-      (e.key.toLocaleLowerCase === "s" || e.key === "ArrowDown") &&
+      (e.key === "ArrowDown" || e.key.toLocaleLowerCase() === "s") &&
       snake.direction.flag !== "top"
     ) {
       // 下
       snake.direction = directionNum.bottom;
     }
     if (
-      (e.key.toLocaleLowerCase === "a" || e.key === "ArrowLeft") &&
+      (e.key === "ArrowLeft" || e.key.toLocaleLowerCase() === "a") &&
       snake.direction.flag !== "right"
     ) {
       // 左
       snake.direction = directionNum.left;
     }
     if (
-      (e.key.toLocaleLowerCase === "d" || e.key === "ArrowRight") &&
+      (e.key === "ArrowRight" || e.key.toLocaleLowerCase() === "d") &&
       snake.direction.flag !== "left"
     ) {
       // 右
       snake.direction = directionNum.right;
     }
+    // console.log(e.key, snake.direction);
     snakeMove();
   };
   // 计时器自动调用蛇移动的方法
